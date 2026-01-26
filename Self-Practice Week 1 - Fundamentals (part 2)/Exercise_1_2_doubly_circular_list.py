@@ -43,7 +43,7 @@ class CircularList():
 
     def delete(self, pos):
         if self.isEmpty():
-            return ValueError("Empty List")
+            raise ValueError("Empty List")
 
         if self.head.next == self.head:
             self.head = None
@@ -73,7 +73,7 @@ class CircularList():
 
     def access(self, pos):
         if self.isEmpty():
-            return ValueError("Empty List")
+            raise ValueError("Empty List")
         
         n = self.length()
         pos = pos%n
